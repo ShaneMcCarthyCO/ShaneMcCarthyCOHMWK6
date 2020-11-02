@@ -56,7 +56,7 @@ $(document).ready(function () {
             console.log(response)
 
             for (let i = 0; i < response.list.length; i++) {
-                //change text area here
+                
                 let date_and_time = response.list[i].dt_txt;
                 let date = date_and_time.split(" ")[0];
                 let time = date_and_time.split(" ")[1];
@@ -98,7 +98,7 @@ $(document).ready(function () {
         search_history = [];
         localStorage.setItem("cities", JSON.stringify(search_history));
     }
-    //put the listener on btn class so that all buttons have listener
+    
     $("#clear-history").click(clearHistory);
     $("#submit-city").click(displaySearchHistory);
 
